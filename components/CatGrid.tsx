@@ -1,11 +1,15 @@
 "use client";
 
-import catData from "../api/catdata.json";
 import SortedGrid from "@/components/SortedGrid";
 import CatCard from "@/components/CatCard";
 
-export default function CatGrid() {
-  const items = catData.cats.map((cat, index) => ({
+type CatGridProps = {
+  cats: Cat[];
+};
+
+export default function CatGrid(props: CatGridProps) {
+  const { cats } = props;
+  const items = cats.map((cat, index) => ({
     key: JSON.stringify(cat),
     index,
     ...cat,
