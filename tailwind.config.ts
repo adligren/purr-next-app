@@ -12,10 +12,9 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-          "gradient-15": "linear-gradient(15deg, var(--tw-gradient-stops))",
       },
       colors: {
-        accent: "#ff0038",
+        accent: "#00caa4",
       },
     },
   },

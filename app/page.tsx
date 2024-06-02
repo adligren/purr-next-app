@@ -1,10 +1,6 @@
-import { CatCard } from "@/components/CatCard";
-import catData from "../api/catdata.json";
+import CatGrid from "@/components/CatGrid";
 
 export default function Home() {
-  const catCards = catData.cats.map((cat) => (
-    <CatCard key={cat.name} cat={cat} />
-  ));
   return (
     <main className="relative flex min-h-screen flex-col items-center p-20 lg:py-12 overflow-hidden">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -19,16 +15,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="my-12 w-full max-w-5xl flex gap-5 lg:mt-6 items-center justify-center">
-        <div className="text-xl text-zinc-900 font-bold">Sorting placeholder</div>
-        <div className="p-2">None</div>
-        <div className="p-2 text-accent underline">Much cute</div>
-        <div className="p-2">Not cute</div>
-      </div>
-
-      <div className="max-w-5xl mb-32 flex flex-wrap justify-around lg:justify-between gap-5  after:absolute after:-z-20 after:h-[1640px] after:w-[840px] after:translate-x-[200px] after:bg-gradient-conic after:from-teal-50 after:via-sky-50 after:blur-3xl after:content-[''] after:rotate-12">
-        {catCards}
-      </div>
+      <CatGrid />
     </main>
   );
 }
